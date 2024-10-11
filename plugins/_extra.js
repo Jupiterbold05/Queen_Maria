@@ -32,7 +32,7 @@ smd({
       return await _0x1cec94.reply("_No messages found!_");
     }
     const _0x338160 = Object.entries(_0x5af784).map(([_0x4630e3, _0x3a7f93]) => "\t*" + (_0x4630e3?.split("\n").join(" ") || "unknown") + "*  ➪  _" + _0x3a7f93 + "_").join("\n");
-    var _0x370694 = ("*LIST OF ACTIVE USERS IN CURRENT CHAT*\n_Note: Sometimes Data will be reset when bot restart!_\n\n*Total Users: _" + _0x599777.length + "_*\n\n*USERNAME ╰┈➤ MESSAGE COUNT(s)*\n" + _0x338160 + "\n\n" + Config.caption).trim();
+    var _0x370694 = ("*LIST OF ACTIVE USERS IN CURRENT CHAT*\n_Note: Sometimes Data will be reset when bot restart!_\n\n*Total Users: _" + _0x599777.length + "_*\n\n*USERNAME 👑 MESSAGE COUNT(s)*\n" + _0x338160 + "\n\n" + Config.caption).trim();
     await _0x1cec94.send(_0x370694, {
       contextInfo: {
         ...(await _0x1cec94.bot.contextInfo("ACTIVE USERS", _0x1cec94.senderName))
@@ -184,7 +184,7 @@ smd({
         edit: _0x2d7cf6
       }, "asta", _0x4e7c63);
     } catch (_0x28ce7e) {}
-    let _0x50f17a = " *👸 QUEEN MARIA- ＢＯＴ ＦＥＡＴＵＲＥ*\n\n\n  ◦ _Total Features ╰┈➤ " + _0x4cf8ed + "_\n  \n*◦ BOT FEATURES*\n\n      Plugins ╰┈➤ " + Object.values(_0x4de967.commands).filter(_0x54d4bf => _0x54d4bf.pattern).length + "_\n      _Msg Listener ╰┈➤ " + Object.values(_0x4de967.commands).filter(_0x2376a3 => _0x2376a3.on).length + "_\n      _Call Listener ╰┈➤ " + Object.values(_0x4de967.commands).filter(_0x54a19b => _0x54a19b.call).length + "_\n      _Group Listener ╰┈➤ " + Object.values(_0x4de967.commands).filter(_0x35381c => _0x35381c.group).length + "_\n  \n\n" + Config.caption;
+    let _0x50f17a = " *👸 QUEEN MARIA- ＢＯＴ ＦＥＡＴＵＲＥ*\n\n\n  ◦ _Total Features 👑 " + _0x4cf8ed + "_\n  \n*◦ BOT FEATURES*\n\n      Plugins 👑 " + Object.values(_0x4de967.commands).filter(_0x54d4bf => _0x54d4bf.pattern).length + "_\n      _Msg Listener 👑 " + Object.values(_0x4de967.commands).filter(_0x2376a3 => _0x2376a3.on).length + "_\n      _Call Listener 👑 " + Object.values(_0x4de967.commands).filter(_0x54a19b => _0x54a19b.call).length + "_\n      _Group Listener👑 " + Object.values(_0x4de967.commands).filter(_0x35381c => _0x35381c.group).length + "_\n  \n\n" + Config.caption;
     await _0x4e7c63.bot.relayMessage(_0x4e7c63.chat, {
       requestPaymentMessage: {
         currencyCodeIso4217: "PK",
@@ -308,7 +308,7 @@ smd({
     let _0x3db049 = speed() - _0xce26d;
     neww = performance.now();
     oldd = performance.now();
-    respon = ("\n╰┈➤Response Speed " + _0x3db049.toFixed(4) + " _Second_ \n " + (oldd - neww) + " _miliseconds_\n\nRuntime : " + runtime(process.uptime()) + "\n\n╰┈➤ Info Server\nRAM: " + formatp(os.totalmem() - os.freemem()) + " / " + formatp(os.totalmem()) + "\n\n╰┈➤_NodeJS Memory Usaage_\n" + Object.keys(_0x37ca41).map((_0x19d575, _0x3942d9, _0x3fa08c) => _0x19d575.padEnd(Math.max(..._0x3fa08c.map(_0x6548cb => _0x6548cb.length)), " ") + ": " + formatp(_0x37ca41[_0x19d575])).join("\n") + "\n\n" + (_0x4a72de[0] ? "╰┈➤_Total CPU Usage_\n" + _0x4a72de[0].model.trim() + " (" + _0x410388.speed + " MHZ)\n" + Object.keys(_0x410388.times).map(_0xffc60c => "- *" + (_0xffc60c + "*").padEnd(6) + ": " + (_0x410388.times[_0xffc60c] * 100 / _0x410388.total).toFixed(2) + "%").join("\n") + " " : "") + "\n\n ").trim();
+    respon = ("\n🤜Response Speed " + _0x3db049.toFixed(4) + " _Second_ \n " + (oldd - neww) + " _miliseconds_\n\nRuntime : " + runtime(process.uptime()) + "\n\n🤜 Info Server\nRAM: " + formatp(os.totalmem() - os.freemem()) + " / " + formatp(os.totalmem()) + "\n\n🤜_NodeJS Memory Usaage_\n" + Object.keys(_0x37ca41).map((_0x19d575, _0x3942d9, _0x3fa08c) => _0x19d575.padEnd(Math.max(..._0x3fa08c.map(_0x6548cb => _0x6548cb.length)), " ") + ": " + formatp(_0x37ca41[_0x19d575])).join("\n") + "\n\n" + (_0x4a72de[0] ? "🤜_Total CPU Usage_\n" + _0x4a72de[0].model.trim() + " (" + _0x410388.speed + " MHZ)\n" + Object.keys(_0x410388.times).map(_0xffc60c => "- *" + (_0xffc60c + "*").padEnd(6) + ": " + (_0x410388.times[_0xffc60c] * 100 / _0x410388.total).toFixed(2) + "%").join("\n") + " " : "") + "\n\n ").trim();
     _0xdfc3ca.reply(respon);
   } catch (_0x13d03e) {
     await _0xdfc3ca.error(_0x13d03e + "\n\ncommand : ping2", _0x13d03e, false);
@@ -380,7 +380,7 @@ smd({
   try {
     let _0x587b99 = _0x41dfb5.split(" ")[0].trim();
     if (!_0x587b99) {
-      return await _0x4cdec8.reply("*Need URL! Use " + prefix + "ss https://github.com/abbybots141/QUEEN_MARIA*");
+      return await _0x4cdec8.reply("*Need URL! Use " + prefix + "ss https://github.com/STAR-KING0/QUEEN_ALYA*");
     }
     let _0x358290 = await ssweb(_0x587b99);
     if (_0x358290 && _0x358290.status == "200") {
@@ -419,7 +419,7 @@ smd({
     try {
       _0x54710d = await smdBuffer(tmpUrl);
     } catch (_0x40985f) {}
-    await _0x10eae6.reply(("*YOUR TEMPMAIL INFO*\n      \n      \n  *EMAIL:* ╰┈➤ " + secmailData[_0x10eae6.sender].email + "\n  *Login:* ╰┈➤ " + secmailData[_0x10eae6.sender].login + "\n  *Domain:* ╰┈➤ " + secmailData[_0x10eae6.sender].domain + "\n  \n  \n  *USE _" + prefix + "checkmail_ to get latest emails!*\n  *USE _" + prefix + "delmail_ to delete current email!*\n  \n  " + Config.caption + "\n  ").trim(), {
+    await _0x10eae6.reply(("*YOUR TEMPMAIL INFO*\n      \n      \n  *EMAIL:* 🤜 " + secmailData[_0x10eae6.sender].email + "\n  *Login:* 🤜 " + secmailData[_0x10eae6.sender].login + "\n  *Domain:* 🤜 " + secmailData[_0x10eae6.sender].domain + "\n  \n  \n  *USE _" + prefix + "checkmail_ to get latest emails!*\n  *USE _" + prefix + "delmail_ to delete current email!*\n  \n  " + Config.caption + "\n  ").trim(), {
       contextInfo: {
         ...(await _0x10eae6.bot.contextInfo("TEMPMAIL", _0x10eae6.senderName, _0x54710d))
       }
@@ -455,7 +455,7 @@ smd({
         emailContent: _0x587f7f
       });
       if (_0x587f7f) {
-        const _0xa4d211 = "\n  *From* ╰┈➤ " + _0x2b6dd0.from + "\n  *Date* ╰┈➤  " + _0x2b6dd0.date + "\n  *EMAIL ID* ╰┈➤  [" + _0x2b6dd0.id + "]\n  *Subject* ╰┈➤  " + _0x2b6dd0.subject + "\n  *Content* ╰┈➤  " + _0x587f7f;
+        const _0xa4d211 = "\n  *From* 🤜 " + _0x2b6dd0.from + "\n  *Date* 🤜  " + _0x2b6dd0.date + "\n  *EMAIL ID* 🤜  [" + _0x2b6dd0.id + "]\n  *Subject* ╰┈➤  " + _0x2b6dd0.subject + "\n  *Content* 🤜  " + _0x587f7f;
         await _0x39080b.reply(_0xa4d211, {
           contextInfo: {
             ...(await _0x39080b.bot.contextInfo("*EMAIL ➪ " + _0x2b6dd0.id + "*", _0x39080b.senderName, _0x392c45))
@@ -531,9 +531,4 @@ tempmail.emailContent = async (_0x2bb874, _0x365dd7, _0x53af41) => {
     });
     const _0x59fd31 = cheerio.load(_0x2d0a5f);
     const _0x492dcb = _0x59fd31.text();
-    return _0x492dcb;
-  } catch (_0x47924e) {
-    console.log(_0x47924e);
-    return null;
-  }
-};
+    return _0x492dc
