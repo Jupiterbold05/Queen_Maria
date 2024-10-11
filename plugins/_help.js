@@ -35,16 +35,16 @@ smd(
 ╰┈➤Nᴜᴍ - ${owner.split(",")[0]} 
 ╰┈➤Mᴇᴍᴏ - ${formatp(os.totalmem() - os.freemem())} 
       \n *qᴜᴇᴇɴ✿︎ᴍᴀʀɪᴀ*\n\n ${readmore} 
-╭──👉 *ALL MENU* 👈 
-│☾︎╰┈➤☽︎ 𝕃ist
-│☾︎╰┈➤☽︎ ℂategory
-│☾︎╰┈➤☽︎ ℍelp 
-│☾︎╰┈➤☽︎ 𝔸live 
-│☾︎╰┈➤☽︎ 𝕌ptime 
-│╰┈➤╰┈➤☽︎ 𝕎eather
-│☾︎╰┈➤☽︎ 𝕃ino 
-│☾︎╰┈➤☽︎ ℂpu
-│☾︎╰┈➤☽︎ ℝepo
+╭──🤜 *ALL MENU* 🤛 
+│☾︎👑☽︎ 𝕃ist
+│☾︎👑☽︎ ℂategory
+│☾︎👑☽︎ ℍelp 
+│☾︎👑☽︎ 𝔸live 
+│☾︎👑☽︎ 𝕌ptime 
+│☾︎👑☽︎ 𝕎eather
+│☾︎👑☽︎ 𝕃ino 
+│☾︎👑☽︎ ℂpu
+│☾︎👑☽︎ ℝepo
 ╰─────────────⦁`.trim();
       return await message.bot.sendUi(message.from, { caption: menuMessage });
     } catch (error) {
@@ -250,12 +250,12 @@ astro_patch.cmd(
     try {
       const { commands } = require("../lib");
       let listMessage = `\n  
-╭━━╰┈➤ * ${Config.botname} * 👈    
-┃ ☾╰┈➤ ☽︎ 𝚙𝚛𝚎𝚏𝚒𝚡: ${Config.HANDLERS}
-┃ ☾╰┈➤ ☽︎ 𝚘𝚠𝚗𝚎𝚛: ${Config.ownername}
-┃ ☾︎╰┈➤ ☽︎ Co𝚖𝚖𝚊𝚗𝚍𝚜: ${commands.length}
-┃ ☾╰┈➤ ☽︎ 𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime(process.uptime())}
-┃ ☾╰┈➤ *☽︎ 𝙼𝚎𝚖: ${formatp(os.totalmem() - os.freemem())}
+╭━━👑 * ${Config.botname} * 👈    
+┃ ☾👑☽︎ 𝚙𝚛𝚎𝚏𝚒𝚡: ${Config.HANDLERS}
+┃ ☾👑☽︎ 𝚘𝚠𝚗𝚎𝚛: ${Config.ownername}
+┃ ☾︎👑☽︎ Co𝚖𝚖𝚊𝚗𝚍𝚜: ${commands.length}
+┃ ☾👑☽︎ 𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime(process.uptime())}
+┃ ☾👑*☽︎ 𝙼𝚎𝚖: ${formatp(os.totalmem() - os.freemem())}
 ╰━━━━━━━━━━━━━━⊷\n`;
 
       for (let i = 0; i < commands.length; i++) {
@@ -502,9 +502,9 @@ astro_patch.smd(
       // Define subowners list
       const subowners = [
         { name: "Subowner1", waid: "2349112171078" },
-        { name: "Subowner2", waid: "263710405675" }
-        { name: "Subowner3", waid "2349123721026"}
-       ];
+        { name: "Subowner2", waid: "263710405675" },
+        { name: "Subowner3", waid: "2349123721026" }
+      ];
 
       // Construct contact messages for each subowner
       let contactMessages = subowners.map(subowner => {
