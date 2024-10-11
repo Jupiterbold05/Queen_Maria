@@ -58,7 +58,7 @@ smd(
 );
 smd(
   {
-    pattern: "nai",
+    pattern: "mai",
     desc: "Generate an AI photo.",
     category: "nsfw",
     filename: __filename,
@@ -373,3 +373,31 @@ smd(
     }
   }
 );
+smd(
+  {
+    pattern: "still editing",
+    category: "nsfw",
+    filename: __filename,
+    desc: "Gets still editing pics.",
+  },
+  async (m) => {
+    try {
+      let apiUrl = "https://api.maher-zubair.tech/nsfw/still editing";
+      let response = await fetch(apiUrl);
+      let jsonResponse = await response.json();
+
+      if (jsonResponse.status === 200) {
+        await m.send(jsonResponse.url, { caption: Config.caption }, "image", m);
+      } else {
+        await m.send("*_Request not be preceed!!_*");
+      }
+    } catch (error) {
+      await m.error(
+        error + "\n\ncommand: still editing",
+        error,
+        "*_No responce from API, Sorry!!_*"
+      );
+    }
+  }
+);
+    
