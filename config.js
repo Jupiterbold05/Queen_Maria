@@ -16,7 +16,7 @@ global.timezone = process.env.TZ || process.env.TIME_ZONE || "Africa/Lagos";
 global.github = process.env.GITHUB || "https://github.com/abbybots141/Queen_Maria";
 global.gurl = process.env.GURL || "https://whatsapp.com/channel/0029VahOucpCcW4s1Zk3O61A";
 global.website = process.env.GURL || "https://whatsapp.com/channel/0029VahOucpCcW4s1Zk3O61A";
-global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://i.imgur.com/zdD9xsf.mp4";
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://imgur.com/a/8j8QxDM";
 global.devs = "2347032411938";
 global.sudo = process.env.SUDO || "2347032411938,263710405675";
 global.owner = process.env.OWNER_NUMBER || "2347032411938,263710405675";
@@ -27,7 +27,7 @@ global.warncount = process.env.WARN_COUNT || 3;
 global.disablepm = process.env.DISABLE_PM || "false";
 global.disablegroup = process.env.DISABLE_GROUPS || "false",
 global.MsgsInLog = process.env.MSGS_IN_LOG || "false";
-global.userImages = process.env.USER_IMAGES || "https://imgur.com/a/s2QSXcX";
+global.userImages = process.env.USER_IMAGES || "https://imgur.com/a/jWj2bSI";
 global.waPresence = process.env.WAPRESENCE || "available";
 global.readcmds = process.env.READ_COMMAND || "false";
 global.readmessage = process.env.READ_MESSAGE || "false";
@@ -75,3 +75,4 @@ fs.watchFile(file, () => {
   delete require.cache[file];
   require(file);
 });
+  
