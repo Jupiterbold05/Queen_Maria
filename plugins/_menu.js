@@ -68,25 +68,25 @@ astro_patch.smd({
     });
 
     // Set the desired menu design
-    const header = "┏━━╰┈➤ *" + Config.botname + "* 👈━━✿︎\n";
+    const header = "┏━━👑 *" + Config.botname + "* 👑━━✿︎\n";
     const lineSeparator = "┃ ";
-    const commandPrefix = "┏━━╰┈➤";
-    const commandSuffix = "╰┈➤━━✿︎";
+    const commandPrefix = "┏━━👑";
+    const commandSuffix = "👑━━✿︎";
     const footer = "┗━━━━━━━━━━━━━━✿︎";
 
     let menuContent = header;
-    menuContent += lineSeparator + "╰┈➤ > *ᴏᴡɴᴇʀ ɴᴀᴍᴇ:* " + Config.ownername + "\n";
-    menuContent += lineSeparator + "╰┈➤*ᴜᴘᴛɪᴍᴇ:* " + runtime(process.uptime()) + "\n";
-    menuContent += lineSeparator + "╰┈➤ *ʀᴀᴍ ᴜꜱᴇ:* " + formatp(os.totalmem() - os.freemem()) + "\n";
-    menuContent += lineSeparator + "╰┈➤ *ᴅᴀᴛᴇ:* " + currentDate + "\n";
-    menuContent += lineSeparator + "╰┈➤ *ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:* " + commands.length + "\n";
+    menuContent += lineSeparator + "👑 > *ᴏᴡɴᴇʀ ɴᴀᴍᴇ:* " + Config.ownername + "\n";
+    menuContent += lineSeparator + "👑*ᴜᴘᴛɪᴍᴇ:* " + runtime(process.uptime()) + "\n";
+    menuContent += lineSeparator + "👑 *ʀᴀᴍ ᴜꜱᴇ:* " + formatp(os.totalmem() - os.freemem()) + "\n";
+    menuContent += lineSeparator + "👑 *ᴅᴀᴛᴇ:* " + currentDate + "\n";
+    menuContent += lineSeparator + "👑 *ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ:* " + commands.length + "\n";
     menuContent += lineSeparator + greeting + "\n";
 
     // List commands by category
     for (const category in commandCategories) {
       menuContent += commandPrefix + " *" + tiny(category) + "* " + commandSuffix + "\n";
       commandCategories[category].forEach(cmd => {
-        menuContent += "┃   🍀 " + fancytext(cmd, 1) + "\n";
+        menuContent += "┃   ☘️ " + fancytext(cmd, 1) + "\n";
       });
     }
     
@@ -102,3 +102,4 @@ astro_patch.smd({
     await context.error(error + "\nCommand: menu", error);
   }
 });
+      
