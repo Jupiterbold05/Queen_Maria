@@ -20,7 +20,7 @@ let {
     filename: __filename,
   },
   async (message) => {
-    const channelMessage = `𝗤𝗨𝗘𝗘𝗡 *MARIA* 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 𝙎𝙐𝙋𝙋𝙊𝙍𝙏\n\n _ʜᴇʏ ʜᴇʀᴇ's ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ, ᴘʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ ᴜs ᴛᴏ ᴋᴇᴇᴘ ᴛʜɪs ᴘʀᴏᴊᴇᴄᴛ ᴀʟɪᴠᴇ_\n *ʟɪɴᴋ:* https://whatsapp.com/channel/0029VahOucpCcW4s1Zk3O61A\n\n*`;
+    const channelMessage = `𝗤𝗨𝗘𝗘𝗡 *𝗠𝗔𝗥𝗜𝗔* 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 𝙎𝙐𝙋𝙋𝙊𝙍𝙏\n\n _ʜᴇʏ ʜᴇʀᴇ's ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ, ᴘʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ ᴜs ᴛᴏ ᴋᴇᴇᴘ ᴛʜɪs ᴘʀᴏᴊᴇᴄᴛ ᴀʟɪᴠᴇ_\n *ʟɪɴᴋ:* https://whatsapp.com/channel/0029VahOucpCcW4s1Zk3O61A\n\n*`;
 
     const contextInfo = {
       forwardingScore: 999,
@@ -281,7 +281,7 @@ smd(
          edit: _0x2d7cf6
        }, "asta", _0x4e7c63);
      } catch (_0x28ce7e) {}
-     let _0x50f17a = " * QUEEN-MARIA - ＢＯＴ ＦＥＡＴＵＲＥ*\n\n\n  ◦ _Total Features 👉 " + _0x4cf8ed + "_\n  \n*◦ LIST DOWN THE FEATURES*\n\n      _Commands 👉 " + Object.values(_0x4de967.commands).filter(_0x54d4bf => _0x54d4bf.pattern).length + "_\n      _Msg Listener 👉 " + Object.values(_0x4de967.commands).filter(_0x2376a3 => _0x2376a3.on).length + "_\n      _Call Listener 👉 " + Object.values(_0x4de967.commands).filter(_0x54a19b => _0x54a19b.call).length + "_\n      _Group Listener 👉 " + Object.values(_0x4de967.commands).filter(_0x35381c => _0x35381c.group).length + "_\n  \n\n" + Config.caption;
+     let _0x50f17a = " * QUEEN-MARIA - ＢＯＴ ＦＥＡＴＵＲＥ*\n\n\n  ◦ _Total Features 👑 " + _0x4cf8ed + "_\n  \n*◦ LIST DOWN THE FEATURES*\n\n      _Commands 👑 " + Object.values(_0x4de967.commands).filter(_0x54d4bf => _0x54d4bf.pattern).length + "_\n      _Msg Listener 👑 " + Object.values(_0x4de967.commands).filter(_0x2376a3 => _0x2376a3.on).length + "_\n      _Call Listener 👑 " + Object.values(_0x4de967.commands).filter(_0x54a19b => _0x54a19b.call).length + "_\n      _Group Listener 👑 " + Object.values(_0x4de967.commands).filter(_0x35381c => _0x35381c.group).length + "_\n  \n\n" + Config.caption;
      await _0x4e7c63.bot.relayMessage(_0x4e7c63.chat, {
        requestPaymentMessage: {
          currencyCodeIso4217: "NG",
@@ -531,7 +531,7 @@ smd(
    info: "check mails in your temporary email address!"
  }, async _0x39080b => {
    try {
-     const _0x13bdf9 = _0x39080b.sender;
+    const _0x13bdf9 = _0x39080b.sender;
      const _0x1ca6eb = secmailData[_0x13bdf9];
      if (!_0x1ca6eb || !_0x1ca6eb.email) {
        return await _0x39080b.reply("*You haven't created a temporary email.*\n  *Use _" + prefix + "tempmail_ to create email first!*");
@@ -550,7 +550,7 @@ smd(
          emailContent: _0x587f7f
        });
        if (_0x587f7f) {
-         const _0xa4d211 = "\n  *From* ╰┈➤ " + _0x2b6dd0.from + "\n  *Date* ➪  " + _0x2b6dd0.date + "\n  *EMAIL ID* ╰┈➤  [" + _0x2b6dd0.id + "]\n  *Subject* ╰┈➤  " + _0x2b6dd0.subject + "\n  *Content* ╰┈➤  " + _0x587f7f;
+         const _0xa4d211 = "\n  *From* 👑 " + _0x2b6dd0.from + "\n  *Date* ➪  " + _0x2b6dd0.date + "\n  *EMAIL ID* 👑  [" + _0x2b6dd0.id + "]\n  *Subject* 👑  " + _0x2b6dd0.subject + "\n  *Content* 👑  " + _0x587f7f;
          await _0x39080b.reply(_0xa4d211, {
            contextInfo: {
              ...(await _0x39080b.bot.contextInfo("*EMAIL ➪ " + _0x2b6dd0.id + "*", _0x39080b.senderName, _0x392c45))
@@ -631,4 +631,5 @@ smd(
      console.log(_0x47924e);
      return null;
    }
- };
+ }; 
+   
