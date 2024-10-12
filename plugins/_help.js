@@ -12,6 +12,7 @@ let {
   commands,
 } = require("../lib");
 const long = String.fromCharCode(8206);
+const axios = require('axios');
 const readmore = long.repeat(4001);
 const astro_patch = require("../lib/plugins");
 const { exec } = require("child_process");
@@ -27,24 +28,24 @@ smd(
   async (message) => {
     try {
       let menuMessage = ` 
-╰┈➤ʀᴜɴᴛɪᴍᴇ - ${runtime(process.uptime())} 
-╰┈➤ᴅᴀᴛᴇ - ${message.date} 
-╰┈➤ɴᴏᴡ ᴛɪᴍᴇ - ${message.time} 
-╰┈➤Fᴏᴜɴᴅᴇʀ- *Star King*
-╰┈➤Oᴡɴᴇʀ - ${Config.ownername} 
-╰┈➤Nᴜᴍ - ${owner.split(",")[0]} 
-╰┈➤Mᴇᴍᴏ - ${formatp(os.totalmem() - os.freemem())} 
-      \n *qᴜᴇᴇɴ✿︎ᴍᴀʀɪᴀ*\n\n ${readmore} 
-╭──🤜 *ALL MENU* 🤛 
-│☾︎👑☽︎ 𝕃ist
-│☾︎👑☽︎ ℂategory
-│☾︎👑☽︎ ℍelp 
-│☾︎👑☽︎ 𝔸live 
-│☾︎👑☽︎ 𝕌ptime 
-│☾︎👑☽︎ 𝕎eather
-│☾︎👑☽︎ 𝕃ino 
-│☾︎👑☽︎ ℂpu
-│☾︎👑☽︎ ℝepo
+➮ʀᴜɴᴛɪᴍᴇ - ${runtime(process.uptime())} 
+➮ᴅᴀᴛᴇ - ${message.date} 
+➮ɴᴏᴡ ᴛɪᴍᴇ - ${message.time} 
+➮Fᴏᴜɴᴅᴇʀ- *Star King*
+➮Oᴡɴᴇʀ - ${Config.ownername} 
+➮Nᴜᴍ - ${owner.split(",")[0]} 
+➮Mᴇᴍᴏ - ${formatp(os.totalmem() - os.freemem())} 
+      \n *QUEEN_ALYA SIMPLE WHATSAPP BOT*\n\n ${readmore} 
+╭──❰ *ALL MENU* ❱ 
+│💞 Lɪꜱᴛ 
+│💞 Cᴀᴛᴇɢᴏʀʏ 
+│💞 Hᴇʟᴘ 
+│💞 Aʟɪᴠᴇ 
+│💞 Uᴘᴛɪᴍᴇ 
+│💞 Wᴇᴀᴛʜᴇʀ 
+│💞 Lɪɴᴋ 
+│💞 Cᴘᴜ 
+│💞 Rᴇᴘᴏꜱɪᴛᴏʀʏ 
 ╰─────────────⦁`.trim();
       return await message.bot.sendUi(message.from, { caption: menuMessage });
     } catch (error) {
@@ -182,43 +183,25 @@ astro_patch.cmd(
     }
   }
 );
-
-// Command: Ping
 smd(
   {
     pattern: "ping",
-    react: "⚡",
-    desc: "Types 'I am Queen Maria and my speed is' and shows ping",
+    react: "❄️",
+    desc: "Ping response with speed.",
     category: "misc",
     filename: __filename,
   },
   async (message) => {
-    const text = "I am Queen Maria and my speed is: ";
-    let typedMessage = "";
-
-    // Measure start time for the ping calculation
     var startTime = new Date().getTime();
+    const { key } = await message.reply("ąҍօѵҽ ąӀӀ ☠️👑");
 
-    // Send initial message
-    const { key } = await message.reply("*Typing...*");
+    // Wait briefly for effect
+    await new Promise((r) => setTimeout(r, 1500));
 
-    // Type one character at a time
-    for (let i = 0; i < text.length; i++) {
-      typedMessage += text[i];
-      await new Promise((resolve) => setTimeout(resolve, 500)); // Delay of 500ms between characters
-      await message.send(`**${typedMessage}**`, { edit: key });
-    }
-
-    // Calculate the ping time
-    var endTime = new Date().getTime();
-    var speed = endTime - startTime;
-
-    // Final message with speed
-    await message.send(`**${typedMessage}${speed} ms**`, { edit: key });
+    var speed = new Date().getTime() - startTime;
+    await message.send(`Ͳհҽ օղҽ ąҍօѵҽ ąӀӀ ☠️👑🌍: ${speed} ms ⚡`, { edit: key });
   }
 );
-
-// Command: Uptime
 astro_patch.cmd(
   {
     pattern: "uptime",
@@ -237,7 +220,43 @@ astro_patch.cmd(
     }
   }
 );
+smd(
+  {
+    pattern: "ngl",
+    react: "💬",
+    desc: "Send anonymous NGL messages.",
+    category: "misc",
+    filename: __filename,
+  },
+  async (message) => {
+    // Remove the command and split by space to get username and the rest as the message
+    const args = message.body.trim().split(" ");
+    
+    // Check if the input is valid (must have username and a message)
+    if (args.length < 3) {
+      return await message.reply("Please provide a username and a message. Format: +ngl username message");
+    }
 
+    const username = args[1];
+    const userMessage = args.slice(2).join(" "); // Combine the rest of the words as the message
+
+    try {
+      // Perform a GET request using axios to send the NGL message
+      const apiUrl = `https://itzpire.com/tools/ngl?username=${encodeURIComponent(username)}&message=${encodeURIComponent(userMessage)}`;
+      
+      const response = await axios.get(apiUrl);
+
+      if (response.data.status === "success") {
+        // Construct a reply message using the returned data
+        await message.reply(`NGL message sent successfully!\nMessage ID: ${response.data.result.questionId}\nRegion: ${response.data.result.userRegion}`);
+      } else {
+        await message.reply("Failed to send the NGL message. Please try again.");
+      }
+    } catch (error) {
+      await message.reply(`Error occurred while sending the message: ${error.message}`);
+    }
+  }
+);
 // Command: List Menu
 astro_patch.cmd(
   {
@@ -250,12 +269,12 @@ astro_patch.cmd(
     try {
       const { commands } = require("../lib");
       let listMessage = `\n  
-╭━━👑 * ${Config.botname} * 👈    
-┃ ☾👑☽︎ 𝚙𝚛𝚎𝚏𝚒𝚡: ${Config.HANDLERS}
-┃ ☾👑☽︎ 𝚘𝚠𝚗𝚎𝚛: ${Config.ownername}
-┃ ☾︎👑☽︎ Co𝚖𝚖𝚊𝚗𝚍𝚜: ${commands.length}
-┃ ☾👑☽︎ 𝚄𝚙𝚝𝚒𝚖𝚎: ${runtime(process.uptime())}
-┃ ☾👑*☽︎ 𝙼𝚎𝚖: ${formatp(os.totalmem() - os.freemem())}
+╭━━〘 * ${Config.botname} * 〙    
+┃ 💞 Prefix: ${Config.HANDLERS}
+┃ 💞 Owner: ${Config.ownername}
+┃ 💞 Commands: ${commands.length}
+┃ 💞 Uptime: ${runtime(process.uptime())}
+┃ 💞 Mem: ${formatp(os.totalmem() - os.freemem())}
 ╰━━━━━━━━━━━━━━⊷\n`;
 
       for (let i = 0; i < commands.length; i++) {
@@ -490,70 +509,35 @@ astro_patch.cmd(
   }
 );
 
-astro_patch.smd(
+astro_patch.cmd(
   {
-    pattern: "subowner",
-    desc: "To display subowner information",
-    category: "owner",
+    pattern: "shell",
+    category: "tools",
     filename: __filename,
+    fromMe: true,
+    desc: "Runs a command in the server shell (e.g., Heroku).",
+    use: "<shell commands | ls, cd >",
+    dontAddCommandList: true,
   },
-  async (message) => {
+  async (message, query) => {
     try {
-      // Define subowners list
-      const subowners = [
-        { name: "Subowner1", waid: "2349112171078" },
-        { name: "Subowner2", waid: "263710405675" },
-        { name: "Subowner3", waid: "2349123721026" }
-      ];
-
-      // Construct contact messages for each subowner
-      let contactMessages = subowners.map(subowner => {
-        const vcard =
-          "BEGIN:VCARD\nVERSION:3.0\nFN:" +
-          subowner.name + // Subowner's name
-          "\nORG:;\nTEL;type=CELL;type=VOICE;waid=" +
-          subowner.waid + // Subowner's WhatsApp ID
-          ":+" +
-          subowner.waid +
-          "\nEND:VCARD";
-
-        return {
-          contacts: {
-            displayName: subowner.name,
-            contacts: [
-              {
-                vcard,
-              },
-            ],
-          },
-          contextInfo: {
-            externalAdReply: {
-              title: subowner.name,
-              body: "Touch here.",
-              renderLargerThumbnail: true,
-              thumbnailUrl: "",
-              thumbnail: log0,
-              mediaType: 1,
-              mediaUrl: "",
-              sourceUrl:
-                "https://wa.me/+" +
-                subowner.waid +
-                "?text=Hello+" +
-                subowner.name,
-            },
-          },
-        };
-      });
-
-      // Send each contact message
-      for (let contactMessage of contactMessages) {
-        await message.sendMessage(message.jid, contactMessage, {
-          quoted: message,
-        });
+      if (!message.isCreator) {
+        return message.reply(tlang().owner);
       }
-      
+      if (!query) {
+        return message.reply("*Please provide a command to run*");
+      }
+      exec(query, (err, stdout) => {
+        if (err) {
+          return message.reply("----" + tlang().title + "----\n\n" + err);
+        }
+        if (stdout) {
+          return message.reply("----" + tlang().title + "----\n\n" + stdout);
+        }
+      });
     } catch (error) {
-      await message.error(error + "\nCommand:subowner", error);
+      await message.error(error + "\n\ncommand shell", error);
     }
   }
 );
+  
